@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div  class="image">
+
+</div>
+<div  class="image">
+
+</div>
+<div  class="image">
+
+</div>
+<div  class="image">
+
+</div>
+<script >
+
+    // var dataimage=[]
+    function pGet(url) {
+        return new  Promise(function (res,rej) {
+            var oRep= new XMLHttpRequest()
+            oRep.onload=function () {
+                res(oRep.responseText)
+            }
+            oRep.open('get',url,true)
+            oRep.send()
+
+        })
+    }
+    pGet('http://localhost:3000').then(function (data) {
+        // var image1 = document.getElementById('image')
+        // dataimage.push('./1.png')
+        console.log(data);
+        // image1.src = dataimage[0]
+
+    })
+
+</script>
+
+</body>
+</html>
